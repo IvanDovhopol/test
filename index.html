@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>test</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
@@ -15,45 +15,100 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <section class="box">
-      <div class="content-position">
-        <img src="./img/photo-portfolio4.jpg" alt="" width="350" />
-        <ul class="content-list">
-          <li class="item">
-            <a href="" class="link">
-              <svg width="20" height="20">
-                <use href="./img/sprite.svg#icon-instagram"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="item">
-            <a href="" class="link">
-              <svg width="20" height="20">
-                <use href="./img/sprite.svg#icon-instagram"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="item">
-            <a href="" class="link">
-              <svg width="20" height="20">
-                <use href="./img/sprite.svg#icon-instagram"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="item">
-            <a href="" class="link">
-              <svg width="20" height="20">
-                <use href="./img/sprite.svg#icon-instagram"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </div>
+    <form class="form-text" name="text-form" autocomplete="on" novalidate>
+      <label>
+        Username
+        <input
+          type="text"
+          name="username"
+          placeholder="Jeson Folger"
+          maxlength="20"
+        />
+      </label>
 
-      <div class="information">
-        <h2 class="title">Position title</h2>
-        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-      </div>
-    </section>
+      <label>
+        Email
+        <input type="email" name="email" placeholder="@" maxlength="40" />
+      </label>
+
+      <label>
+        Password
+        <input type="password" name="password" minlengtg="3" maxlength="20" />
+      </label>
+
+      <button type="submit">submit</button>
+    </form>
+
+    <form class="form-number">
+      <p>Choose a number:</p>
+      <label>
+        one
+        <input type="radio" name="number" value="one" checked />
+      </label>
+
+      <label>
+        two
+        <input type="radio" name="number" value="two" />
+      </label>
+
+      <label>
+        three
+        <input type="radio" name="number" value="three" />
+      </label>
+    </form>
+
+    <form>
+      <p>What are your hobbies?</p>
+      <label>
+        gym
+        <input type="checkbox" name="hobby" value="gym" />
+      </label>
+
+      <label>
+        pc games
+        <input type="checkbox" name="hobby" value="pc games" />
+      </label>
+
+      <label>
+        walk
+        <input type="checkbox" name="hobby" value="walk" />
+      </label>
+    </form>
+
+    <form>
+      Year of birth
+      <label>
+        <input
+          type="number"
+          name="age"
+          value="1995"
+          min="1950"
+          max="2005"
+          step="0.5"
+        />
+      </label>
+    </form>
+
+    <form>
+      <label>
+        Phone number
+        <input type="tel" name="phone_number" value="+380 " />
+      </label>
+      <button type="submit">submit</button>
+    </form>
+
+    <form>
+      <label>
+        slider
+        <input
+          type="range"
+          name="slider"
+          min="0"
+          max="100"
+          value="40"
+          step="10"
+        />
+      </label>
+    </form>
   </body>
 </html>

@@ -1,42 +1,26 @@
 body {
+  line-height: 1.5;
   background-color: antiquewhite;
 }
 
-.box {
-  width: 350px;
-  outline: 1px solid black;
-  margin: 30px auto;
+form{
+  padding-left: 20px;
 }
 
-.content-position{
-  position: relative;
+label {
+  margin-bottom: 8px;
+  max-width: 300px;
 }
 
-.content-list {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  padding: 0;
-  margin: 0;
-  display: flex;
+input {
+  padding: 8px;
+  font-family: inherit;
 }
 
-.item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  background-color: #f7f;
-  border-radius: 50%;
-  margin-right: 20px;
+button{
+  cursor: pointer;
 }
 
-.item:last-child {
-  margin-right: 0;
-}
-
-.title,
-.text {
-  text-align: center;
+.form-number input{
+  margin-right: 30px;
 }
