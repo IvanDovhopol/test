@@ -15,100 +15,77 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <form class="form-text" name="text-form" autocomplete="on" novalidate>
-      <label>
-        Username
+    <form class="form">
+      <div class="form-field">
+        <label for="name">Name</label>
         <input
           type="text"
-          name="username"
-          placeholder="Jeson Folger"
-          maxlength="20"
+          name="name"
+          id="name"
+          placeholder="John Primor"
+          autofocus
         />
-      </label>
+      </div>
 
-      <label>
-        Email
-        <input type="email" name="email" placeholder="@" maxlength="40" />
-      </label>
-
-      <label>
-        Password
-        <input type="password" name="password" minlengtg="3" maxlength="20" />
-      </label>
-
-      <button type="submit">submit</button>
-    </form>
-
-    <form class="form-number">
-      <p>Choose a number:</p>
-      <label>
-        one
-        <input type="radio" name="number" value="one" checked />
-      </label>
-
-      <label>
-        two
-        <input type="radio" name="number" value="two" />
-      </label>
-
-      <label>
-        three
-        <input type="radio" name="number" value="three" />
-      </label>
-    </form>
-
-    <form>
-      <p>What are your hobbies?</p>
-      <label>
-        gym
-        <input type="checkbox" name="hobby" value="gym" />
-      </label>
-
-      <label>
-        pc games
-        <input type="checkbox" name="hobby" value="pc games" />
-      </label>
-
-      <label>
-        walk
-        <input type="checkbox" name="hobby" value="walk" />
-      </label>
-    </form>
-
-    <form>
-      Year of birth
-      <label>
+      <div class="form-field">
+        <label for="email">Email</label>
         <input
-          type="number"
-          name="age"
-          value="1995"
-          min="1950"
-          max="2005"
-          step="0.5"
+          type="email"
+          name="email"
+          id="email"
+          placeholder="explorer@gmail.com"
         />
-      </label>
-    </form>
+      </div>
 
-    <form>
-      <label>
-        Phone number
-        <input type="tel" name="phone_number" value="+380 " />
-      </label>
-      <button type="submit">submit</button>
-    </form>
+      <div class="form-field">
+        <label for="tel">Phone</label>
+        <input type="tel" name="tel" id="tel" placeholder="+380 000 000 000" />
+      </div>
 
-    <form>
-      <label>
-        slider
-        <input
-          type="range"
-          name="slider"
-          min="0"
-          max="100"
-          value="40"
-          step="10"
-        />
-      </label>
+      <div role="group" class="group">
+        <h2 class="group-title">Тема доклада</h2>
+
+        <ul class="list-option list">
+          <li class="item-option">
+            <input type="checkbox" name="topic" value="html" id="html" checked/>
+            <label for="html">HTML</label>
+          </li>
+          <li class="item-option">
+            <input type="checkbox" name="topic" value="css" id="css" />
+            <label for="css">CSS</label>
+          </li>
+          <li class="item-option">
+            <input type="checkbox" name="topic" value="js" id="js" />
+            <label for="js">JavaScript</label>
+          </li>
+        </ul>
+      </div>
+
+      <div role="group" class="group">
+        <h2 class="group-title">Уровень вашей експерности</h2>
+
+        <ul class="list-experience list">
+          <li class="item">
+            <input type="radio" name="experience" value="junior" id="junior" checked>
+            <label for="junior">Junior</label>
+          </li>
+          <li class="item">
+            <input type="radio" name="experience" value="middle" id="middle">
+            <label for="middle">Middle</label>
+          </li>
+          <li class="item">
+            <input type="radio" name="experience" value="senior" id="senior">
+            <label for="senior">Senior</label>
+          </li>
+        </ul>
+      </div>
+
+      <div class="form-field">
+        <label for="date">Дата доклада</label>
+        <input type="datetime-local" name="date" value="date" id="date">
+      </div>
+
+      <button type="submit">Submit</button>
     </form>
   </body>
 </html>
