@@ -15,26 +15,15 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <form class="form">
+    <form class="form js-speaker-form">
       <div class="form-field">
         <label for="name">Name</label>
-        <input
-          type="text"
-          name="name"
-          id="name"
-          placeholder="John Primor"
-          autofocus
-        />
+        <input type="text" name="name" id="name" placeholder="John Primor" autofocus />
       </div>
 
       <div class="form-field">
         <label for="email">Email</label>
-        <input
-          type="email"
-          name="email"
-          id="email"
-          placeholder="explorer@gmail.com"
-        />
+        <input type="email" name="email" id="email" placeholder="explorer@gmail.com" />
       </div>
 
       <div class="form-field">
@@ -47,7 +36,7 @@
 
         <ul class="list-option list">
           <li class="item-option">
-            <input type="checkbox" name="topic" value="html" id="html" checked/>
+            <input type="checkbox" name="topic" value="html" id="html" checked />
             <label for="html">HTML</label>
           </li>
           <li class="item-option">
@@ -62,19 +51,19 @@
       </div>
 
       <div role="group" class="group">
-        <h2 class="group-title">Уровень вашей експерности</h2>
+        <h2 class="group-title">Уровень вашей экспертности</h2>
 
         <ul class="list-experience list">
           <li class="item">
-            <input type="radio" name="experience" value="junior" id="junior" checked>
+            <input type="radio" name="experience" value="junior" id="junior" checked />
             <label for="junior">Junior</label>
           </li>
           <li class="item">
-            <input type="radio" name="experience" value="middle" id="middle">
+            <input type="radio" name="experience" value="middle" id="middle" />
             <label for="middle">Middle</label>
           </li>
           <li class="item">
-            <input type="radio" name="experience" value="senior" id="senior">
+            <input type="radio" name="experience" value="senior" id="senior" />
             <label for="senior">Senior</label>
           </li>
         </ul>
@@ -82,10 +71,32 @@
 
       <div class="form-field">
         <label for="date">Дата доклада</label>
-        <input type="datetime-local" name="date" value="date" id="date">
+        <input type="datetime-local" name="date" value="date" id="date" />
+      </div>
+
+      <div class="form-field">
+        <label for="pdf">Загрузите копию доклада в pdf</label>
+        <input type="file" name="pdf" id="pdf" />
+      </div>
+
+      <div class="form-field">
+        <label for="comment">Оставьте коментарий</label>
+        <textarea name="comment" id="comment" placeholder="Уточните детали доклада" minlength="30"></textarea>
       </div>
 
       <button type="submit">Submit</button>
     </form>
+
+    <script>
+      (() => {
+        document.querySelector(".js-speaker-form").addEventListener("submit", e => {
+          e.preventDefault();
+
+          new FormData(e.currentTarget).forEach((value, name) => console.log(`${name}: ${value}`));
+
+          e.currentTarget.reset();
+        });
+      })();
+    </script>
   </body>
 </html>

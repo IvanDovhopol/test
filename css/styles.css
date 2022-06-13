@@ -3,24 +3,29 @@ body {
   background-color: antiquewhite;
 }
 
-.list{
+.list {
   list-style: none;
   padding-left: 0;
 }
 
-.form{
+.form {
   width: 500px;
   outline: 1px solid black;
   margin: 0 auto;
   padding: 15px;
 }
 
-.form-field{
+.form-field {
   display: flex;
   flex-direction: column;
   padding-bottom: 15px;
 }
 
-.group-title{
+.group-title {
   margin-top: 0;
+}
+
+.form-field textarea {
+  width: 100%;
+  min-height: 150px;
 }
