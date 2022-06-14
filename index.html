@@ -17,18 +17,37 @@
   <body>
     <form class="form js-speaker-form">
       <div class="form-field">
-        <label for="name">Name</label>
-        <input type="text" name="name" id="name" placeholder="John Primor" autofocus required />
+        <label class="form-label" for="name">Username</label>
+        <input
+          class="form-input name"
+          type="text"
+          name="username"
+          id="username"
+          placeholder="John Primor"
+          minlength="3"
+          autofocus
+          required
+          pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
+          title="John Primor"
+        />
+      </div>
+
+      <div class="form-field email">
+        <input class="form-input email" type="email" name="email" id="email" required title="explorer@gmail.com" />
+        <label class="form-label email" for="email">Email</label>
       </div>
 
       <div class="form-field">
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" placeholder="explorer@gmail.com" required />
-      </div>
-
-      <div class="form-field">
-        <label for="tel">Phone</label>
-        <input type="tel" name="tel" id="tel" placeholder="+380 000 000 000" required />
+        <label class="form-label" for="tel">Phone</label>
+        <input
+          class="form-input"
+          type="tel"
+          name="tel"
+          id="tel"
+          placeholder="+380 000 000 000"
+          required
+          title="+380 000 000 000"
+        />
       </div>
 
       <div role="group" class="group">
@@ -36,16 +55,16 @@
 
         <ul class="list-option list">
           <li class="item-option">
-            <input type="checkbox" name="topic" value="html" id="html" checked />
-            <label for="html">HTML</label>
+            <input class="form-input" type="checkbox" name="topic" value="html" id="html" checked />
+            <label class="form-label" for="html">HTML</label>
           </li>
           <li class="item-option">
-            <input type="checkbox" name="topic" value="css" id="css" />
-            <label for="css">CSS</label>
+            <input class="form-input" type="checkbox" name="topic" value="css" id="css" />
+            <label class="form-label" for="css">CSS</label>
           </li>
           <li class="item-option">
-            <input type="checkbox" name="topic" value="js" id="js" />
-            <label for="js">JavaScript</label>
+            <input class="form-input" type="checkbox" name="topic" value="js" id="js" />
+            <label class="form-label" for="js">JavaScript</label>
           </li>
         </ul>
       </div>
@@ -55,38 +74,68 @@
 
         <ul class="list-experience list">
           <li class="item">
-            <input type="radio" name="experience" value="junior" id="junior" checked />
-            <label for="junior">Junior</label>
+            <input class="form-input" type="radio" name="experience" value="junior" id="junior" checked />
+            <label class="form-label" for="junior">Junior</label>
           </li>
           <li class="item">
-            <input type="radio" name="experience" value="middle" id="middle" />
-            <label for="middle">Middle</label>
+            <input class="form-input" type="radio" name="experience" value="middle" id="middle" />
+            <label class="form-label" for="middle">Middle</label>
           </li>
           <li class="item">
-            <input type="radio" name="experience" value="senior" id="senior" />
-            <label for="senior">Senior</label>
+            <input class="form-input" type="radio" name="experience" value="senior" id="senior" disabled />
+            <label class="form-label" for="senior">Senior</label>
           </li>
         </ul>
       </div>
 
       <div class="form-field">
-        <label for="date">Дата доклада</label>
-        <input type="datetime-local" name="date" value="date" id="date" required />
+        <label class="form-label" for="date">Дата доклада</label>
+        <input
+          class="form-input date"
+          type="datetime-local"
+          name="date"
+          value="date"
+          id="date"
+          required
+          min="2022-06-13T00:00"
+          max="2022-06-17T23:59"
+        />
       </div>
 
       <div class="form-field">
-        <label for="pdf">Загрузите копию доклада в pdf</label>
-        <input type="file" name="pdf" id="pdf" />
+        <label class="form-label" for="pdf">Загрузите копию доклада в pdf</label>
+        <input class="form-input" type="file" name="pdf" id="pdf" />
       </div>
 
       <div class="form-field">
-        <label for="comment">Оставьте коментарий</label>
-        <textarea name="comment" id="comment" placeholder="Уточните детали доклада" minlength="30"></textarea>
+        <label class="form-label" for="number">Номер твоей группы</label>
+        <input
+          class="form-input number"
+          type="number"
+          name="group-number"
+          id="group-number"
+          min="1"
+          max="30"
+          placeholder="1-30"
+          title="1-30"
+          value="1"
+        />
       </div>
 
       <div class="form-field">
-        <input type="checkbox" name="policy" id="policy" />
-        <label for="policy"
+        <label class="form-label" for="comment">Оставьте коментарий</label>
+        <textarea
+          name="comment"
+          id="comment"
+          placeholder="Уточните детали доклада"
+          minlength="30"
+          title="min-30"
+        ></textarea>
+      </div>
+
+      <div class="form-field">
+        <input class="form-input" type="checkbox" name="policy" id="policy" />
+        <label class="form-label" for="policy"
           >Соглашаюсь на все <span><a href="/">политика конфиденциальности</a></span></label
         >
       </div>

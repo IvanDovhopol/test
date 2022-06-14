@@ -1,6 +1,8 @@
 body {
   line-height: 1.5;
   background-color: antiquewhite;
+  margin: 0;
+  padding: 0;
 }
 
 .list {
@@ -12,7 +14,7 @@ body {
   width: 500px;
   margin: 0 auto;
   padding: 15px;
-  border: 1px solid black;
+  border: 5px solid deepskyblue;
   border-radius: 4px;
   background-color: #fff;
 }
@@ -30,12 +32,13 @@ body {
 .form-field textarea {
   width: 100%;
   min-height: 150px;
+  outline-color: #1976d2;
 }
 
 .button {
   display: inline-flex;
   padding: 12px 32px;
-  border: none;
+  border: transparent;
   border-radius: 4px;
   background-color: #2196f3;
   color: #fff;
@@ -48,7 +51,73 @@ body {
   background-color: #1976d2;
 }
 
-.form input:focus {
-  outline: none;
-  border-color: #2196f3;
+/* .form-label:focus-within {
+  color: #1976d2;
+  работает только когда инпут в лейпбл
+} */
+
+.form-input {
+  padding: 10px 20px;
+}
+
+.form-input:focus {
+  outline-color: #1976d2;
+}
+
+.form-input:checked + .form-label {
+  color: #2196f3;
+}
+
+.form-input.number:in-range {
+  color: rgb(7, 167, 7);
+}
+
+.form-input.number:out-of-range {
+  color: red;
+}
+
+/*
+.form-input:invalid {
+  border-color: red;
+}
+
+.form-input:valid {
+  border-color: rgb(7, 167, 7);
+}
+
+.form-input:placeholder-shown {
+  border-color: red;
+}
+
+.form-input:not(placeholder-shown) {
+  border-color: #1976d2;
+} */
+
+.form-input:not(:placeholder-shown):required:valid {
+  border-color: rgb(7, 167, 7);
+}
+
+.form-input:not(:placeholder-shown):required:invalid {
+  border-color: red;
+}
+
+.form-label a {
+  color: #1976d2;
+}
+
+.form-input.email {
+  border: 1px solid blue;
+  width: 100%;
+}
+
+.form-field.email {
+  position: relative;
+}
+
+.form-label.email {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+  /* background-color: #1976d2; */
 }
