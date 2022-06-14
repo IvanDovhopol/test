@@ -18,17 +18,17 @@
     <form class="form js-speaker-form">
       <div class="form-field">
         <label for="name">Name</label>
-        <input type="text" name="name" id="name" placeholder="John Primor" autofocus />
+        <input type="text" name="name" id="name" placeholder="John Primor" autofocus required />
       </div>
 
       <div class="form-field">
         <label for="email">Email</label>
-        <input type="email" name="email" id="email" placeholder="explorer@gmail.com" />
+        <input type="email" name="email" id="email" placeholder="explorer@gmail.com" required />
       </div>
 
       <div class="form-field">
         <label for="tel">Phone</label>
-        <input type="tel" name="tel" id="tel" placeholder="+380 000 000 000" />
+        <input type="tel" name="tel" id="tel" placeholder="+380 000 000 000" required />
       </div>
 
       <div role="group" class="group">
@@ -71,7 +71,7 @@
 
       <div class="form-field">
         <label for="date">Дата доклада</label>
-        <input type="datetime-local" name="date" value="date" id="date" />
+        <input type="datetime-local" name="date" value="date" id="date" required />
       </div>
 
       <div class="form-field">
@@ -84,7 +84,14 @@
         <textarea name="comment" id="comment" placeholder="Уточните детали доклада" minlength="30"></textarea>
       </div>
 
-      <button type="submit">Submit</button>
+      <div class="form-field">
+        <input type="checkbox" name="policy" id="policy" />
+        <label for="policy"
+          >Соглашаюсь на все <span><a href="/">политика конфиденциальности</a></span></label
+        >
+      </div>
+
+      <button type="submit" class="button">Submit</button>
     </form>
 
     <script>
