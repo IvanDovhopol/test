@@ -11,7 +11,7 @@ body {
 }
 
 .form {
-  width: 500px;
+  width: 600px;
   margin: 0 auto;
   padding: 15px;
   border: 5px solid deepskyblue;
@@ -22,7 +22,7 @@ body {
 .form-field {
   display: flex;
   flex-direction: column;
-  padding-bottom: 15px;
+  margin-bottom: 30px;
 }
 
 .group-title {
@@ -102,22 +102,44 @@ body {
 }
 
 .form-label a {
-  color: #1976d2;
+  color: #2196f3;
 }
 
-.form-input.email {
-  border: 1px solid blue;
+.form-input.uplift {
+  border: 1px solid #1976d2;
   width: 100%;
 }
 
-.form-field.email {
+.form-field.uplift {
   position: relative;
 }
 
-.form-label.email {
+.form-label.uplift {
   position: absolute;
   top: 50%;
-  left: 30px;
+  left: 40px;
   transform: translateY(-50%);
   /* background-color: #1976d2; */
+}
+
+.form-input.uplift:focus + .form-label.uplift,
+.form-input.uplift:not(:placeholder-shown) + .form-label.uplift{
+  transform: translateY(-50px);
+  color: #1976d2;
+}
+
+.icon{
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: black;
+}
+
+.form-input:focus ~ .icon{
+  background-color: #1976d2;
 }

@@ -15,39 +15,51 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <form class="form js-speaker-form">
-      <div class="form-field">
-        <label class="form-label" for="name">Username</label>
+    <form class="form js-speaker-form" autocomplete="off">
+      <div class="form-field uplift">
         <input
-          class="form-input name"
+          class="form-input name uplift"
           type="text"
           name="username"
           id="username"
-          placeholder="John Primor"
+          placeholder=" "
           minlength="3"
           autofocus
           required
           pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
           title="John Primor"
         />
+        <label class="form-label uplift" for="name">Username</label>
+        <span class="icon"></span>
       </div>
 
-      <div class="form-field email">
-        <input class="form-input email" type="email" name="email" id="email" required title="explorer@gmail.com" />
-        <label class="form-label email" for="email">Email</label>
-      </div>
-
-      <div class="form-field">
-        <label class="form-label" for="tel">Phone</label>
+      <div class="form-field email uplift">
         <input
-          class="form-input"
+          class="form-input email uplift"
+          type="email"
+          name="email"
+          id="email"
+          required
+          title="explorer@gmail.com"
+          placeholder=" "
+        />
+        <label class="form-label email uplift" for="email">Email</label>
+        <span class="icon"></span>
+      </div>
+
+      <div class="form-field uplift">
+        
+        <input
+          class="form-input uplift"
           type="tel"
           name="tel"
           id="tel"
-          placeholder="+380 000 000 000"
+          placeholder=" "
           required
           title="+380 000 000 000"
         />
+        <label class="form-label uplift" for="tel">Phone</label>
+        <span class="icon"></span>
       </div>
 
       <div role="group" class="group">
@@ -55,15 +67,34 @@
 
         <ul class="list-option list">
           <li class="item-option">
-            <input class="form-input" type="checkbox" name="topic" value="html" id="html" checked />
+            <input
+              class="form-input"
+              type="checkbox"
+              name="topic"
+              value="html"
+              id="html"
+              checked
+            />
             <label class="form-label" for="html">HTML</label>
           </li>
           <li class="item-option">
-            <input class="form-input" type="checkbox" name="topic" value="css" id="css" />
+            <input
+              class="form-input"
+              type="checkbox"
+              name="topic"
+              value="css"
+              id="css"
+            />
             <label class="form-label" for="css">CSS</label>
           </li>
           <li class="item-option">
-            <input class="form-input" type="checkbox" name="topic" value="js" id="js" />
+            <input
+              class="form-input"
+              type="checkbox"
+              name="topic"
+              value="js"
+              id="js"
+            />
             <label class="form-label" for="js">JavaScript</label>
           </li>
         </ul>
@@ -74,15 +105,35 @@
 
         <ul class="list-experience list">
           <li class="item">
-            <input class="form-input" type="radio" name="experience" value="junior" id="junior" checked />
+            <input
+              class="form-input"
+              type="radio"
+              name="experience"
+              value="junior"
+              id="junior"
+              checked
+            />
             <label class="form-label" for="junior">Junior</label>
           </li>
           <li class="item">
-            <input class="form-input" type="radio" name="experience" value="middle" id="middle" />
+            <input
+              class="form-input"
+              type="radio"
+              name="experience"
+              value="middle"
+              id="middle"
+            />
             <label class="form-label" for="middle">Middle</label>
           </li>
           <li class="item">
-            <input class="form-input" type="radio" name="experience" value="senior" id="senior" disabled />
+            <input
+              class="form-input"
+              type="radio"
+              name="experience"
+              value="senior"
+              id="senior"
+              disabled
+            />
             <label class="form-label" for="senior">Senior</label>
           </li>
         </ul>
@@ -103,7 +154,9 @@
       </div>
 
       <div class="form-field">
-        <label class="form-label" for="pdf">Загрузите копию доклада в pdf</label>
+        <label class="form-label" for="pdf"
+          >Загрузите копию доклада в pdf</label
+        >
         <input class="form-input" type="file" name="pdf" id="pdf" />
       </div>
 
@@ -136,7 +189,8 @@
       <div class="form-field">
         <input class="form-input" type="checkbox" name="policy" id="policy" />
         <label class="form-label" for="policy"
-          >Соглашаюсь на все <span><a href="/">политика конфиденциальности</a></span></label
+          >Соглашаюсь на все
+          <span><a href="/">политика конфиденциальности</a></span></label
         >
       </div>
 
@@ -145,13 +199,17 @@
 
     <script>
       (() => {
-        document.querySelector(".js-speaker-form").addEventListener("submit", e => {
-          e.preventDefault();
+        document
+          .querySelector(".js-speaker-form")
+          .addEventListener("submit", (e) => {
+            e.preventDefault();
 
-          new FormData(e.currentTarget).forEach((value, name) => console.log(`${name}: ${value}`));
+            new FormData(e.currentTarget).forEach((value, name) =>
+              console.log(`${name}: ${value}`)
+            );
 
-          e.currentTarget.reset();
-        });
+            e.currentTarget.reset();
+          });
       })();
     </script>
   </body>
