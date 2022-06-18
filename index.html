@@ -15,202 +15,81 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <form class="form js-speaker-form" autocomplete="off">
-      <div class="form-field uplift">
-        <input
-          class="form-input name uplift"
-          type="text"
-          name="username"
-          id="username"
-          placeholder=" "
-          minlength="3"
-          autofocus
-          required
-          pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
-          title="John Primor"
-        />
-        <label class="form-label uplift" for="name">Username</label>
-        <span class="icon"></span>
-      </div>
+    <!-- <article class="post">
+      <a class="post__link" href="./">
+        <img class="post__img" src="./img/photo-portfolio4.jpg" alt="alt" />
+        <h2 class="post__title">Lorem, ipsum dolor.</h2>
+        <p class="post__description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, voluptate atque! Eum temporibus fuga libero
+          quos dolores animi veniam accusantium, molestias consequatur, minus optio ipsum.
+        </p>
+      </a>
+    </article> -->
 
-      <div class="form-field email uplift">
-        <input
-          class="form-input email uplift"
-          type="email"
-          name="email"
-          id="email"
-          required
-          title="explorer@gmail.com"
-          placeholder=" "
-        />
-        <label class="form-label email uplift" for="email">Email</label>
-        <span class="icon"></span>
-      </div>
+    <!-- BOX -->
+    <!-- <div class="box box--red box__start"></div>
+    <div class="box box--blue"></div>
+    <div class="box box--green"></div>
+    <div class="box box-black box__end"></div> -->
 
-      <div class="form-field uplift">
-        
-        <input
-          class="form-input uplift"
-          type="tel"
-          name="tel"
-          id="tel"
-          placeholder=" "
-          required
-          title="+380 000 000 000"
-        />
-        <label class="form-label uplift" for="tel">Phone</label>
-        <span class="icon"></span>
-      </div>
+    <!-- МИКС -->
+    <!-- <header class="page-header">
+      <a class="logo page-header__logo" href="/">Logo</a>
 
-      <div role="group" class="group">
-        <h2 class="group-title">Тема доклада</h2>
+      <ul class="nav">
+        <li class="nav__item"><a class="nav__link" href="/">Студия</a></li>
+        <li class="nav__item"><a class="nav__link" href="/">Портфолио</a></li>
+        <li class="nav__item"><a class="nav__link" href="/">Контакты</a></li>
+      </ul>
+    </header>
 
-        <ul class="list-option list">
-          <li class="item-option">
-            <input
-              class="form-input"
-              type="checkbox"
-              name="topic"
-              value="html"
-              id="html"
-              checked
-            />
-            <label class="form-label" for="html">HTML</label>
-          </li>
-          <li class="item-option">
-            <input
-              class="form-input"
-              type="checkbox"
-              name="topic"
-              value="css"
-              id="css"
-            />
-            <label class="form-label" for="css">CSS</label>
-          </li>
-          <li class="item-option">
-            <input
-              class="form-input"
-              type="checkbox"
-              name="topic"
-              value="js"
-              id="js"
-            />
-            <label class="form-label" for="js">JavaScript</label>
+    <main></main>
+
+    <footer class="page-footer">
+      <a class="logo page-footer__logo" href="/">Logo</a>
+
+      <ul class="nav">
+        <li class="nav__item"><a class="nav__link" href="/">Студия</a></li>
+        <li class="nav__item"><a class="nav__link" href="/">Портфолио</a></li>
+        <li class="nav__item"><a class="nav__link" href="/">Контакты</a></li>
+      </ul>
+    </footer> -->
+
+    <!-- CARD -->
+    <!-- <section class="card">
+      <h2 class="card__title">Lorem, ipsum dolor.</h2>
+      <p class="card__description">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem vitae quo dolore unde eaque accusantium autem
+        dicta saepe consequuntur! Debitis, fugiat aepe consequuntur! Debitis, fugiat magnam suscipit officiis rem
+        possimus repudiandae arc magnam suscipit officiis rem possimus repudiandae architecto. Facilis, maxime?
+      </p>
+      <button class="card__btn" type="button">Read more</button>
+    </section> -->
+
+    <!-- Popular products -->
+    <section class="section">
+      <div class="container">
+        <h1 class="section__heading">Popular products</h1>
+
+        <ul class="grid">
+          <li class="grid__item">
+            <article class="product">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-product-2_large.png?format=webp&v=1530129318"
+                alt="Кроссовки"
+                width="480"
+              />
+              <h2 class="product__name">Boots</h2>
+              <p class="product__price">Price: 200 credits</p>
+              <button class="button product__button" type="button" aria-label="Add to cart">
+                <svg class="product__icon" width="20" height="20">
+                  <use href="./img/sprite.svg#cart"></use>
+                </svg>
+              </button>
+            </article>
           </li>
         </ul>
       </div>
-
-      <div role="group" class="group">
-        <h2 class="group-title">Уровень вашей экспертности</h2>
-
-        <ul class="list-experience list">
-          <li class="item">
-            <input
-              class="form-input"
-              type="radio"
-              name="experience"
-              value="junior"
-              id="junior"
-              checked
-            />
-            <label class="form-label" for="junior">Junior</label>
-          </li>
-          <li class="item">
-            <input
-              class="form-input"
-              type="radio"
-              name="experience"
-              value="middle"
-              id="middle"
-            />
-            <label class="form-label" for="middle">Middle</label>
-          </li>
-          <li class="item">
-            <input
-              class="form-input"
-              type="radio"
-              name="experience"
-              value="senior"
-              id="senior"
-              disabled
-            />
-            <label class="form-label" for="senior">Senior</label>
-          </li>
-        </ul>
-      </div>
-
-      <div class="form-field">
-        <label class="form-label" for="date">Дата доклада</label>
-        <input
-          class="form-input date"
-          type="datetime-local"
-          name="date"
-          value="date"
-          id="date"
-          required
-          min="2022-06-13T00:00"
-          max="2022-06-17T23:59"
-        />
-      </div>
-
-      <div class="form-field">
-        <label class="form-label" for="pdf"
-          >Загрузите копию доклада в pdf</label
-        >
-        <input class="form-input" type="file" name="pdf" id="pdf" />
-      </div>
-
-      <div class="form-field">
-        <label class="form-label" for="number">Номер твоей группы</label>
-        <input
-          class="form-input number"
-          type="number"
-          name="group-number"
-          id="group-number"
-          min="1"
-          max="30"
-          placeholder="1-30"
-          title="1-30"
-          value="1"
-        />
-      </div>
-
-      <div class="form-field">
-        <label class="form-label" for="comment">Оставьте коментарий</label>
-        <textarea
-          name="comment"
-          id="comment"
-          placeholder="Уточните детали доклада"
-          minlength="30"
-          title="min-30"
-        ></textarea>
-      </div>
-
-      <div class="form-field">
-        <input class="form-input" type="checkbox" name="policy" id="policy" />
-        <label class="form-label" for="policy"
-          >Соглашаюсь на все
-          <span><a href="/">политика конфиденциальности</a></span></label
-        >
-      </div>
-
-      <button type="submit" class="button">Submit</button>
-    </form>
-
-    <script>
-      (() => {
-        document
-          .querySelector(".js-speaker-form")
-          .addEventListener("submit", (e) => {
-            e.preventDefault();
-
-            new FormData(e.currentTarget).forEach((value, name) =>
-              console.log(`${name}: ${value}`)
-            );
-
-            e.currentTarget.reset();
-          });
-      })();
-    </script>
+    </section>
   </body>
 </html>
