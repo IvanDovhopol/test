@@ -17,6 +17,8 @@ body {
 @media screen and (min-width: 768px) {
   .container {
     width: 768px;
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 @media screen and (min-width: 1140px) {
@@ -33,4 +35,14 @@ body {
   color: #ffffff;
   background-color: red;
   border: 1px solid black;
+}
+@media screen and (min-width: 768px) {
+  .box {
+    flex-basis: 50%;
+  }
+}
+@media screen and (min-width: 1140px) {
+  .box {
+    flex-basis: 33.3333333333%;
+  }
 }/*# sourceMappingURL=main.css.map */
