@@ -35,10 +35,10 @@ body {
 	border: 1px solid black;
 
 	@media screen and (min-width: 768px) {
-		flex-basis: 50%;
+		width: 50%;
 	}
 
 	@media screen and (min-width: 1140px) {
-		flex-basis: calc(100% / 3);
+		width: calc(100% / 3);
 	}
 }
